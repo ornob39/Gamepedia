@@ -18,4 +18,10 @@ export class SearchBarComponent implements OnInit {
   async onPress() {
     this.router.navigate(['']);
   }
+  async userLogin() {
+    this.router.navigate(['/login']);
+  }
+  async userRegister() {
+    this.router.navigate(['/register']);
+  }
 }

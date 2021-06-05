@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgForm,  } from '@angular/forms';
-
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,12 +8,16 @@ import { FormControl, NgForm,  } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registeredUserData = { email: '', password: '' };
-  constructor() {}
+
+  constructor(private _auth: AuthService) {}
 
   ngOnInit() {}
 
   registerUser() {
-    console.log(this.registeredUserData);
+    this._auth.registerUser(this.registeredUserData).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    );
   }
 
   onSubmit(form: NgForm) {}

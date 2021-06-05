@@ -14,13 +14,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   public games: Array<Game>;
   private routeSub: Subscription;
   private gameSub: Subscription;
+
   constructor(
     private httpService: HttpService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
       if (params['game-search']) {
         this.searchGames('metacrit', params['game-search']);
@@ -30,20 +31,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  searchGames(sort: string, search?: string) {
-    this.gameSub = this.httpService
-      .getGameList(sort, search)
-      .subscribe((gameList: APIResponse<Game>) => {
+  async searchGames(sort: string, search?: string) {
+    this.gameSub = (await this.httpService.getGameList(sort, search)).subscribe(
+      (gameList: APIResponse<Game>) => {
         this.games = gameList.results;
         console.log(gameList);
-      });
+      }
+    );
   }
 
-  openGameDetails(id: string): void {
+  async openGameDetails(id: string): Promise<void> {
     this.router.navigate(['details', id]);
   }
 
-  ngOnDestroy(): void {
+  async ngOnDestroy(): Promise<void> {
     if (this.gameSub) {
       this.gameSub.unsubscribe();
     }

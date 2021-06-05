@@ -1,7 +1,14 @@
-<div class="search-container">
+<mat-toolbar fxLayout="row" fxLayoutGap="10px">
+    <button mat-flat-button class="home-button" (click)="onPress()">Games</button>
+
     <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <span class="logo" routerLink="/">Games</span>
-        <input class="search-input" name="search" ngModel placeholder="Search 500,000+ games" />
-        <button class="search-button">Search</button>
+        <input class="search-input" matInput name="search" ngModel placeholder="Search 500,000+ games" />
+        <button mat-raised-button class="search-button" color="primary">
+      Search
+    </button>
     </form>
-</div>
+
+    <button class="login-button" mat-raised-button>Login</button>
+
+    <button class="signup-button" mat-raised-button>Signup</button>
+</mat-toolbar>

@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GaugeModule } from 'angular-gauge';
+//Flex Layout//
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //MatModules//
 
@@ -19,10 +22,15 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, HomeComponent],
+  declarations: [AppComponent, SearchBarComponent, HomeComponent, RegisterComponent],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -34,6 +42,9 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [
     {

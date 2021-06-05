@@ -1,29 +1,36 @@
-<section class="signup-form">
-    <mat-card class="container signup-card" fxLayout="column" fxLayoutAlign="center center">
-        <mat-card-header class="card-header">
-            Signup&nbsp;To&nbsp;Access&nbsp;Website
-        </mat-card-header>
-        <mat-card-content>
-            <form appearance="outline" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Email</mat-label>
-                    <input [(ngModel)]="registeredUserData.email" name="email" matInput type="email" placeholder="Your email" ngModel email required #emailInput="ngModel" />
-                    <mat-icon matSuffix>email</mat-icon>
-                    <mat-error *ngIf="emailInput.hasError('required')">Empty Email</mat-error>
-                    <mat-error *ngIf="!emailInput.hasError('required')">Invalid Email</mat-error>
-                </mat-form-field>
-                <mat-form-field appearance="outline" hintLabel="Should be atleast 6 characters long">
-                    <mat-label>Enter Password</mat-label>
-                    <input [(ngModel)]="registeredUserData.password" name="password" matInput type="password" placeholder="Your password" ngModel required minLength="6" #pwInput="ngModel" />
-                    <mat-icon matSuffix>password</mat-icon>
-                    <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
-                    <mat-error>Small Password!</mat-error>
-                </mat-form-field>
+<div class="container-fluid">
+    <div class="row">
+        <section class="signup-form">
+            <div class="col">
+                <mat-card class="container signup-card" fxLayout="column" fxLayoutAlign="center center">
+                    <mat-card-header class="card-header" fxLayout="column" fxLayoutAlign="center center">
+                        <p>Signup to view contents</p>
+                    </mat-card-header>
 
-                <button (click)="registerUser()" type="submit" id="submit" class="submit-btn" mat-raised-button color="primary" [disabled]="f.invalid" style="margin-top: 20px">
-          Submit
-        </button>
-            </form>
-        </mat-card-content>
-    </mat-card>
-</section>
+                    <mat-card-content>
+                        <form appearance="outline" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Enter Email</mat-label>
+                                <input [(ngModel)]="registeredUserData.email" name="email" matInput type="email" placeholder="Your email" ngModel email required #emailInput="ngModel" />
+                                <mat-icon matSuffix>email</mat-icon>
+                                <mat-error *ngIf="emailInput.hasError('required')">Empty Email</mat-error>
+                                <mat-error *ngIf="!emailInput.hasError('required')">Invalid Email</mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" hintLabel="Should be atleast 6 characters long">
+                                <mat-label>Enter Password</mat-label>
+                                <input [(ngModel)]="registeredUserData.password" name="password" matInput type="password" placeholder="Your password" ngModel required minLength="6" #pwInput="ngModel" />
+                                <mat-icon matSuffix>password</mat-icon>
+                                <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
+                                <mat-error>Small Password!</mat-error>
+                            </mat-form-field>
+
+                            <button (click)="registerUser()" type="submit" id="submit" class="submit-btn" mat-raised-button color="primary" [disabled]="f.invalid" style="margin-top: 20px">
+                Submit
+              </button>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +7,15 @@ import { FormControl, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  maxDate = new Date();
+  loginUserData = { email: '', password: '' };
 
   constructor() {}
 
-  ngOnInit() {
-    this.maxDate = new Date();
-    this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
-  }
+  ngOnInit() {}
 
+  loginUser() {
+    console.log(this.loginUserData);
+  }
   onSubmit(form: NgForm) {
     console.log(form);
   }

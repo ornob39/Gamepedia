@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../models/user')
-
+const jwt = require('jwt')
 
 const db = "mongodb+srv://ornob:BWiJ7YxlQn7THbRp@cluster0.pbofs.mongodb.net/eventsdb?retryWrites=true&w=majority";
 
@@ -28,6 +28,7 @@ router.post('/register', (req, res) => {
             if (error) {
                 console.log(error);
             } else {
+                let payload = { subject: }
                 res.status(200).send(registeredUser)
             }
         })

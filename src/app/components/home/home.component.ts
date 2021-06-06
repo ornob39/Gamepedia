@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -36,6 +37,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       (gameList: APIResponse<Game>) => {
         this.games = gameList.results;
         console.log(gameList);
+      },
+      (err) => {
+        if (err instanceof HttpErrorResponse) {
+          if (err.status === 401) {
+            this.router.navigate(['/login']);
+          }
+        }
       }
     );
   }

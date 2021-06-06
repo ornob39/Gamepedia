@@ -3,8 +3,8 @@
         <section class="signup-form">
             <div class="col">
                 <mat-card class="container signup-card" fxLayout="column" fxLayoutAlign="center center">
-                    <mat-card-header class="card-header" fxLayout="column" fxLayoutAlign="center center">
-                        <p>LOGIN</p>
+                    <mat-card-header appearance="fill" class="card-header" fxLayout="column" fxLayoutAlign="center center">
+                        Login with your credentials
                     </mat-card-header>
 
                     <mat-card-content>
@@ -24,7 +24,7 @@
                                 <mat-error>Small Password!</mat-error>
                             </mat-form-field>
 
-                            <button (click)="loginUser()" type="submit" id="submit" class="submit-btn" mat-raised-button color="warn" [disabled]="f.invalid" style="margin-top: 20px">
+                            <button (click)="loginUser()" type="submit" id="submit" class="submit-btn" mat-flat-button [disabled]="f.invalid" style="margin-top: 20px">
                 Login
               </button>
                         </form>

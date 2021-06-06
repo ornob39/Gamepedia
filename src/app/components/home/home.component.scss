@@ -6,32 +6,101 @@
     width: 20px;
     height: 30px;
     padding-bottom: 40px;
+    background-color: white;
 }
 
-::ng-deep {
-    .mat-form-field-infix {
-        background-color: #ffffff;
-    }
-    .mat-select-value,
-    .mat-select-arrow,
-    .mat-form-field-hide-placeholder .mat-select-placeholder,
-    .mat-form-field-appearance-legacy .mat-form-field-label {
-        color: #fff !important;
-        opacity: 1;
-    }
-    .mat-form-field-infix {
-        border-color: #fff !important;
-        border-top: none;
-        padding-left: 5px !important;
-    }
-    .mat-form-field-appearance-legacy .mat-form-field-label {
-        padding-left: 5px;
-    }
-    .mat-form-field-appearance-legacy .mat-form-field-underline {
-        background-color: #fff !important;
-    }
+.selector-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #151515;
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 10% !important;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    padding: auto;
+    margin-left: 50% !important;
+    margin-right: 50% !important;
+    box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 
+.selector-label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    margin: auto !important;
+}
+
+.select-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 500;
+    color: rgb(26, 19, 19);
+    opacity: 1;
+    margin: auto !important;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 3px 8px 0px black;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.matoption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 500;
+    color: rgb(37, 32, 32);
+    opacity: 1;
+    margin: auto !important;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 3px 8px 0px black;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+// ::ng-deep {
+//     .mat-form-field-infix {
+//         background-color: #ffffff;
+//     }
+//     .mat-select-value,
+//     .mat-select-arrow,
+//     .mat-form-field-hide-placeholder .mat-select-placeholder,
+//     .mat-form-field-appearance-legacy .mat-form-field-label {
+//         color: #fff !important;
+//         opacity: 1;
+//     }
+//     .mat-form-field-infix {
+//         border-color: #fff !important;
+//         border-top: none;
+//         padding-left: 5px !important;
+//     }
+//     .mat-form-field-appearance-legacy .mat-form-field-label {
+//         padding-left: 5px;
+//     }
+//     .mat-form-field-appearance-legacy .mat-form-field-underline {
+//         background-color: #fff !important;
+//     }
+// }
 .games {
     display: flex;
     flex-wrap: wrap;

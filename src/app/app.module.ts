@@ -27,9 +27,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +44,9 @@ import { AuthService } from './auth.service';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
+    HeaderComponent,
+    SidenavComponent,
+    HomepageComponent,
   ],
   imports: [
     FlexLayoutModule,
@@ -56,6 +65,8 @@ import { AuthService } from './auth.service';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatMenuModule,
+    MatSidenavModule,
   ],
   providers: [
     {

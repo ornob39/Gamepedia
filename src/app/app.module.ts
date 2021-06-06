@@ -30,16 +30,22 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+//
+
+// App Components //
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { AuthService } from './auth.service';
+
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
+//
+// For Authentication //
 import { AuthGuard } from './auth.guard';
-
+import { AuthService } from './auth.service';
+import { TokenInterceptorService } from './token-interceptor.service';
+//
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,6 +91,11 @@ import { AuthGuard } from './auth.guard';
     },
     AuthService,
     AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })

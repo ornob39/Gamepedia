@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../models/user')
-const jwt = require('jwt')
+const jwt = require('jsonwebtoken')
 
+//MongoDB Credentials//
 const db = "mongodb+srv://ornob:BWiJ7YxlQn7THbRp@cluster0.pbofs.mongodb.net/eventsdb?retryWrites=true&w=majority";
 
+//Connection to MongoDB
 mongoose.connect(db, err => {
     if (err) {
         console.log(err)
@@ -14,7 +16,7 @@ mongoose.connect(db, err => {
     }
 })
 
-
+//API Test
 router.get('/', function(req, res) {
     res.send('From API Route')
 })
@@ -28,8 +30,9 @@ router.post('/register', (req, res) => {
             if (error) {
                 console.log(error);
             } else {
-                let payload = { subject: }
-                res.status(200).send(registeredUser)
+                let payload = { subject: registeredUser._id }
+                let token = jwt.sign(payload, 'secretKey')
+                res.status(200).send({ token })
             }
         })
     })
@@ -49,7 +52,9 @@ router.post('/login', (req, res) => {
             if (user.password !== userData.password) {
                 res.status(401).send('Invalid password')
             } else {
-                res.status(200).send(user)
+                let payload = { subject: user._id }
+                let token = jwt.sign(payload, 'secretKey')
+                res.status(200).send({ token })
             }
 
         }

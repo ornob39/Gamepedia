@@ -38,6 +38,8 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
+import { AuthGuard } from './auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +84,7 @@ import { HomepageComponent } from './homepage/homepage.component';
       multi: true,
     },
     AuthService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent],
 })

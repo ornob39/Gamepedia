@@ -29,6 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -67,6 +68,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     ReactiveFormsModule,
     MatMenuModule,
     MatSidenavModule,
+    MatSnackBarModule,
   ],
   providers: [
     {

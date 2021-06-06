@@ -5,14 +5,14 @@
     </button>
     </div>
     <div>
-        <button mat-raised-button color="primary" routerLink="/home">
+        <button mat-raised-button color="primary" (click)="_authService.notLogged()" routerLink="/home">
       <mat-icon>image_search</mat-icon> Gamepedia
     </button>
     </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs fxHide.sm>
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-            <button class="header-button" mat-raised-button color="primary" routerLink="/home">
+            <button class="header-button" mat-raised-button color="primary" (click)="_authService.notLogged()" routerLink="/home">
         Home
       </button>
 
@@ -24,14 +24,14 @@
         </button>
             </form>
 
-            <button class="header-button" mat-raised-button color="primary" routerLink="/login">
+            <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/login">
         Login
       </button>
-            <button class="header-button" mat-raised-button color="primary" routerLink="/register">
+            <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/register">
         Signup
       </button>
 
-            <button class="header-button" mat-raised-button color="primary" routerLink="/">
+            <button class="header-button" mat-raised-button color="primary" *ngIf="_authService.loggedIn()" (click)="onLogout()" (click)="_authService.logoutUser()" routerLink="">
         Logout
       </button>
         </ul>

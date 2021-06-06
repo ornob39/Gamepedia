@@ -3,6 +3,9 @@ import { NgForm } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { HomeComponent } from 'src/app/components/home/home.component';
+import { AuthService } from '../../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +13,11 @@ import { HomeComponent } from 'src/app/components/home/home.component';
 })
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    public _authService: AuthService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {}
   onToggleSidenav() {
@@ -22,5 +29,7 @@ export class HeaderComponent implements OnInit {
   selected() {
     this.router.navigate(['']);
   }
-
+  onLogout() {
+    this._snackBar.open('Logged Out', 'Clear', { duration: 3000 });
+  }
 }

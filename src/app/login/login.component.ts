@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   loginUserData = { email: '', password: '' };
 
   constructor(
-    private _auth: AuthService,
+    public _auth: AuthService,
     private _snackBar: MatSnackBar,
     private _router: Router
   ) {}
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   loginUser() {
     this._auth.loginUser(this.loginUserData).subscribe(
       (res) => {
-        console.log(res);
+
         localStorage.setItem('token', res.token);
         this._snackBar.open('Login Successful!', 'Clear', { duration: 3000 });
         this._router.navigate(['/home']);

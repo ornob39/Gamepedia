@@ -36,7 +36,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.gameSub = (await this.httpService.getGameList(sort, search)).subscribe(
       (gameList: APIResponse<Game>) => {
         this.games = gameList.results;
-        console.log(gameList);
       },
       (err) => {
         if (err instanceof HttpErrorResponse) {

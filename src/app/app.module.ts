@@ -45,6 +45,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { DetailsComponent } from './components/details/details.component';
+import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 //
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     HeaderComponent,
     SidenavComponent,
     HomepageComponent,
+    DetailsComponent,
+    GameTabsComponent,
   ],
   imports: [
     FlexLayoutModule,
@@ -64,7 +68,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    GaugeModule,
+    GaugeModule.forRoot(),
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,

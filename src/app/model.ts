@@ -7,7 +7,7 @@ export interface Game {
   description: string;
   metacritic: number;
   genres: Array<Genre>;
-  parent_platform: Array<ParentPlatform>;
+  parent_platforms: Array<ParentPlatform>;
   publishers: Array<Publishers>;
   ratings: Array<Rating>;
   screenshots: Array<Screenshots>;
@@ -17,18 +17,21 @@ export interface Game {
 export interface APIResponse<T> {
   results: Array<T>;
 }
-
+// API Interfaces
 interface Genre {
   name: string;
 }
+
 interface ParentPlatform {
   platform: {
     name: string;
   };
 }
+
 interface Publishers {
   name: string;
 }
+
 interface Rating {
   id: number;
   count: number;
@@ -44,5 +47,3 @@ interface Trailer {
     max: string;
   };
 }
-
-

@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { DetailsComponent } from './components/details/details.component';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: 'default', component: HomepageComponent },
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'search/:game-search',
     component: HomeComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

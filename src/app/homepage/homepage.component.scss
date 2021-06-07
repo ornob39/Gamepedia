@@ -13,6 +13,22 @@
         color: white
     }
     
+    .card-footer {
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .footer-btn {
+        color: white;
+        font-weight: 900;
+        box-shadow: 4px 3px 11px 6px rgba(155, 5, 255, 0.555);
+        transform: translateY(-3px) !important;
+        -webkit-transform: translateY(-3px) !important;
+        -moz-transform: translateY(-3px) !important;
+        -ms-transform: translateY(-3px) !important;
+        -o-transform: translateY(-3px) !important;
+    }
+    
     .header-content {
         background-color: #141414;
         color: white

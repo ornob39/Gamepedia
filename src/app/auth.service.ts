@@ -39,7 +39,15 @@ export class AuthService {
   //Snackbar//
   notLogged() {
     if (!!localStorage.getItem('token') == false) {
+      this._router.navigate(['/login']);
       this._snackBar.open('Login to Access Website', 'Clear', {
+        duration: 3000,
+      });
+    }
+  }
+  notLoggedPromt() {
+    if (!!localStorage.getItem('token') == false) {
+      this._snackBar.open('Login to View More Contents', 'Clear', {
         duration: 3000,
       });
     }

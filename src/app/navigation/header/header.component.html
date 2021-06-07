@@ -5,7 +5,7 @@
     </button>
     </div>
     <div>
-        <button mat-raised-button color="primary" (click)="_authService.notLogged()" routerLink="/home">
+        <button mat-raised-button color="primary" routerLink="">
       <mat-icon>image_search</mat-icon> Gamepedia
     </button>
     </div>
@@ -16,10 +16,10 @@
         Home
       </button>
 
-            <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)" (ngSubmit)="_authService.notLogged()">
                 <input class="search-input" matInput name="search" ngModel placeholder="Search 500,000+ games" />
 
-                <button class="header-button" mat-raised-button class="search-button" color="primary">
+                <button class="header-button" mat-raised-button class="search-button" color="primary" (click)="_authService.notLogged()">
           Search
         </button>
             </form>

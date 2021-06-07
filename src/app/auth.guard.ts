@@ -1,16 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  CanActivateChild,
-  CanDeactivate,
-  CanLoad,
-  Route,
-  RouterStateSnapshot,
-  UrlSegment,
-  UrlTree,
-  Router,
-} from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 
 import { AuthService } from './auth.service';
 // import { Observable } from 'rxjs';
@@ -33,20 +22,3 @@ export class AuthGuard implements CanActivate {
     }
   }
 }
-// canActivateChild(
-//   childRoute: ActivatedRouteSnapshot,
-//   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-//   return true;
-// }
-// canDeactivate(
-//   component: unknown,
-//   currentRoute: ActivatedRouteSnapshot,
-//   currentState: RouterStateSnapshot,
-//   nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-//   return true;
-// }
-// canLoad(
-//   route: Route,
-//   segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-//   return true;
-// }

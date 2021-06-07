@@ -32,6 +32,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 //
 
+// Angular Bootstrap
+
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
+
 // App Components //
 
 import { RegisterComponent } from './register/register.component';
@@ -47,6 +51,7 @@ import { AuthService } from './auth.service';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
+
 //
 @NgModule({
   declarations: [
@@ -81,6 +86,7 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     MatMenuModule,
     MatSidenavModule,
     MatSnackBarModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [
     {

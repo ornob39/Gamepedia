@@ -12,7 +12,7 @@
                 <p class="game-header-genres">
                     <span *ngFor="let genre of game.genres; let last = last">{{ genre.name }}<span *ngIf="!last">, </span></span>
                 </p>
-                <div class="game-gauge">
+                <div class="game-gauge" fxHide fxShow.gt-sm>
                     <mwl-gauge class="two" [max]="100" [dialStartAngle]="170" [dialEndAngle]="10" [value]="gameRating" [animated]="true" [color]="getColor" [animationDuration]="2">
                     </mwl-gauge>
                     <a class="game-gauge-label" target="_blank" href="{{ game.metacritic_url }}

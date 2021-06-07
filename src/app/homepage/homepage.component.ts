@@ -35,8 +35,7 @@ export class HomepageComponent implements OnInit {
     'resident-evil-village',
     'stalker-2',
   ];
-  ids = ['vampire-the-masquerade-bloodlines-2'];
-  id = 'vampire-the-masquerade-bloodlines-2';
+
   //Best of the year
   slides_best = [
     { image: '../../assets/Homepage/Slides/best/1.png' },
@@ -45,11 +44,18 @@ export class HomepageComponent implements OnInit {
     { image: '../../assets/Homepage/Slides/best/4.jpg' },
     { image: '../../assets/Homepage/Slides/best/5.png' },
   ];
+
+  best_titles = [
+    'Cyberpunk',
+    'outriders',
+    'halo-infinite',
+    'resident-evil-village',
+    'stalker-2',
+  ];
+
+  //Navigate to details
   async openGameDetails(id: string): Promise<void> {
     this.router.navigate(['details', id]);
     console.log('clicked');
   }
-
-
-
 }

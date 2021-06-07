@@ -1,0 +1,35 @@
+[debug] [2021-06-07T16:58:43.407Z] ----------------------------------------------------------------------
+[debug] [2021-06-07T16:58:43.410Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Acer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2021-06-07T16:58:43.410Z] CLI Version:   9.12.1
+[debug] [2021-06-07T16:58:43.410Z] Platform:      win32
+[debug] [2021-06-07T16:58:43.411Z] Node Version:  v14.17.0
+[debug] [2021-06-07T16:58:43.411Z] Time:          Mon Jun 07 2021 22:58:43 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-06-07T16:58:43.412Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-07T16:58:43.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-07T16:58:43.421Z] > authorizing via signed-in user (ornob39@gmail.com)
+[debug] [2021-06-07T16:58:43.421Z] [iam] checking project game-store-4d3e3 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-06-07T16:58:43.424Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/game-store-4d3e3:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-06-07T16:58:44.603Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 07 Jun 2021 16:58:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=985","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-07T16:58:44.605Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/game-store-4d3e3/serviceAccounts/game-store-4d3e3@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-06-07T16:58:45.842Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 07 Jun 2021 16:58:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'game-store-4d3e3'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run 
+[info] +  functions: Finished running predeploy script. 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-06-07T16:59:01.935Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/game-store-4d3e3/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-06-07T16:59:01.936Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/game-store-4d3e3/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-06-07T16:59:01.936Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/game-store-4d3e3/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-07T16:59:30.289Z] Error: connect ETIMEDOUT 172.217.194.95:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 172.217.194.95:443

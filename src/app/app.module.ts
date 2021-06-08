@@ -30,6 +30,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
+
 //
 
 // Angular Bootstrap
@@ -87,6 +89,7 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     MatSidenavModule,
     MatSnackBarModule,
     MatCarouselModule.forRoot(),
+    MatDividerModule,
   ],
   providers: [
     {

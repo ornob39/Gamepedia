@@ -14,3 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/api', api);
 const HTML_DIR = path.join(__dirname, '/public/')
 app.use(express.static(HTML_DIR))
+app.listen(3000, () => {
+  console.log('App listening on port 3000!');
+});

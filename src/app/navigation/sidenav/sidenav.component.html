@@ -3,10 +3,11 @@
     <mat-icon class="nav-icon" color="primary">home</mat-icon>
     Home
   </button>
-    <!-- <button mat-icon-button routerLink="/re" (click)="onClose()">
-    <mat-icon class="nav-icon" color="primary">account_circle</mat-icon>
-    Signup
-  </button> -->
+    <button class="site-nav" mat-icon-button routerLink="/home" (click)="_authService.notLogged()" routerLink="/home" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">data_exploration</mat-icon>Our
+    Database
+  </button>
+
     <button class="site-nav" mat-icon-button routerLink="/login" (click)="onClose()">
     <mat-icon class="nav-icon" color="primary">login</mat-icon>Login
   </button>
@@ -16,5 +17,9 @@
 
     <button class="site-nav" mat-icon-button (click)="onLogout()" (click)="onClose()" (click)="_authService.logoutUser()">
     <mat-icon class="nav-icon" color="primary">logout</mat-icon>Logout
+  </button>
+    <button class="site-nav" mat-icon-button (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">keyboard_arrow_left</mat-icon
+    >Close
   </button>
 </mat-nav-list>

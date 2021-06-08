@@ -15,18 +15,24 @@
                         orientation="ltr">
                         <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image" overlayColor="#00000040" [hideOverlay]="false">
                             <div class="col">
-                                <mat-card-footer fxLayout="row" fxLayoutAlign="center center" class="card-footer">
-                                    <button fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                    <h2 style="text-transform: uppercase; margin: auto">
+                                <mat-card-footer class="card-footer" fxLayout="row" fxLayoutAlign="center center">
+                                    <button fxLayout="row" fxLayoutAlign="end end" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
+                    <p
+                      class="card-paragraph"
+                      style="text-transform: uppercase; margin: auto"
+                    >
                       {{ new_titles[i] }}
-                    </h2>
+                    </p>
                   </button>
                                 </mat-card-footer>
                                 <mat-card-footer (click)="openGameDetails(new_titles[i])" (click)="_authService.notLogged()" fxLayout="col" fxLayoutAlign="end end" class="card-footer">
                                     <button (click)="openGameDetails(new_titles[i])" (click)="_authService.notLogged()" fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                    <h2 style="text-transform: uppercase; margin: auto">
+                    <p
+                      class="card-paragraph"
+                      style="text-transform: uppercase; margin: auto"
+                    >
                       Show Details
-                    </h2>
+                    </p>
                   </button>
                                 </mat-card-footer>
                             </div>
@@ -48,16 +54,22 @@
                     <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides_best; let i = index" [image]="slide.image" overlayColor="#00000040" [hideOverlay]="false">
                         <mat-card-footer (click)="openGameDetails(best_titles[i])" fxLayout="row" fxLayoutAlign="center center" class="card-footer">
                             <button (click)="openGameDetails(best_titles[i])" (click)="_authService.notLogged()" fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                <h2 style="text-transform: uppercase; margin: auto">
+                <p
+                  class="card-paragraph"
+                  style="text-transform: uppercase; margin: auto"
+                >
                   {{ best_titles[i] }}
-                </h2>
+                </p>
               </button>
                         </mat-card-footer>
                         <mat-card-footer (click)="openGameDetails(best_titles[i])" (click)="_authService.notLogged()" fxLayout="col" fxLayoutAlign="end end" class="card-footer">
                             <button (click)="openGameDetails(best_titles[i])" (click)="_authService.notLogged()" fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                <h2 style="text-transform: uppercase; margin: auto">
+                <p
+                  class="card-paragraph"
+                  style="text-transform: uppercase; margin: auto"
+                >
                   Show Details
-                </h2>
+                </p>
               </button>
                         </mat-card-footer>
                     </mat-carousel-slide>
@@ -77,16 +89,22 @@
                     <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides_10; let i = index" [image]="slide.image" overlayColor="#00000040" [hideOverlay]="false">
                         <mat-card-footer (click)="openGameDetails(top10_titles[i])" fxLayout="row" fxLayoutAlign="center center" class="card-footer">
                             <button (click)="openGameDetails(top10_titles[i])" (click)="_authService.notLogged()" fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                <h2 style="text-transform: uppercase; margin: auto">
+                <p
+                  class="card-paragraph"
+                  style="text-transform: uppercase; margin: auto"
+                >
                   {{ top10_titles[i] }}
-                </h2>
+                </p>
               </button>
                         </mat-card-footer>
                         <mat-card-footer (click)="openGameDetails(top10_titles[i])" (click)="_authService.notLogged()" fxLayout="col" fxLayoutAlign="end end" class="card-footer">
                             <button (click)="openGameDetails(top10_titles[i])" (click)="_authService.notLogged()" fxLayout="row" fxLayoutAlign="center center" class="footer-btn" mat-raised-button style="background-color: #ffffff00">
-                <h2 style="text-transform: uppercase; margin: auto">
+                <p
+                  class="card-paragraph"
+                  style="text-transform: uppercase; margin: auto"
+                >
                   Show Details
-                </h2>
+                </p>
               </button>
                         </mat-card-footer>
                     </mat-carousel-slide>

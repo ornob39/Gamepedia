@@ -24,7 +24,7 @@
                                     <mat-error>Small Password!</mat-error>
                                 </mat-form-field>
 
-                                <button (click)="_auth.wrongPassword()" (click)="loginUser()" type="submit" id="submit" class="submit-btn" mat-flat-button [disabled]="f.invalid" style="margin-top: 20px">
+                                <button (click)="loginUser()" (click)="_auth.wrongPassword()" type="submit" id="submit" class="submit-btn" mat-flat-button [disabled]="f.invalid" style="margin-top: 20px">
                   Login
                 </button>
                             </form>

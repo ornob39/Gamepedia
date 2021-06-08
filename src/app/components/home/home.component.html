@@ -1,5 +1,11 @@
-<mat-form-field class="selector-form" style="height: 50px">
-    <mat-label class="selector-label">Sort Games by</mat-label>
+<mat-form-field appearance="fill" class="selector-form">
+    <mat-label style="color: white !important">
+        <h3>
+            Sort Games by &nbsp;
+            <mat-icon matSuffix>arrow_circle_down</mat-icon>
+        </h3>
+    </mat-label>
+
     <mat-select class="select-panel" panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchGames(sort)">
         <mat-option value="name" class="matoption">Name</mat-option>
         <mat-option class="matoption" value="-released">Released</mat-option>

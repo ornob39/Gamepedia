@@ -19,7 +19,6 @@
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 10% !important;
     margin-top: 50px !important;
     margin-bottom: 30px !important;
     padding: auto;
@@ -31,6 +30,8 @@
     &:hover {
         transform: translateY(-3px);
     }
+    // width: 100px !important;
+    // height: 50px !important;
 }
 
 .selector-label {
@@ -54,7 +55,7 @@
     color: rgb(26, 19, 19);
     opacity: 1;
     margin: auto !important;
-    width: 100%;
+    width: 30%;
     border-radius: 5px;
     box-shadow: 4px 3px 8px 0px black;
     transition-duration: 0.3s;

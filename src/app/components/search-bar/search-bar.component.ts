@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../auth.service';
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
@@ -12,16 +12,16 @@ export class SearchBarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async onSubmit(form: NgForm) {
+   onSubmit(form: NgForm) {
     this.router.navigate(['search', form.value.search]);
   }
-  async onPress() {
+   onPress() {
     this.router.navigate(['']);
   }
-  async userLogin() {
+   userLogin() {
     this.router.navigate(['/login']);
   }
-  async userRegister() {
+   userRegister() {
     this.router.navigate(['/register']);
   }
 }

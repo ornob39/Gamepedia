@@ -1,19 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
-const api = require('./routes/api')
-const PORT = 3000;
+const cors = require('cors')
 const path = require('path');
 
+const api = require('./routes/api');
+const port = 3000;
+
 const app = express();
-const http = require('http').createServer(app)
-app.use(cors());
+app.use(cors())
+app.use(express.static(path.join(__dirname, 'dist')));
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/api', api);
-const HTML_DIR = path.join(__dirname, '/public/')
-app.use(express.static(HTML_DIR))
-app.listen(3000, () => {
-  console.log('App listening on port 3000!');
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'dist/index.html'));
+// });
+
+app.listen(port, function() {
+    console.log("Server running on localhost:" + port);
 });

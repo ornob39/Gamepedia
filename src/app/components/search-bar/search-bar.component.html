@@ -1,12 +1,5 @@
-<mat-toolbar fxLayout="row" fxLayoutGap="10px">
-    <button mat-flat-button class="home-button" (click)="onPress()">Games</button>
-
+<div class="search-bar" fxFlex fxLayout fxLayoutAlign="flex-end end">
     <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
         <input class="search-input" matInput name="search" ngModel placeholder="Search 500,000+ games" />
-
     </form>
-
-    <button class="login-button" mat-raised-button (click)="userLogin()">Login</button>
-
-    <button class="signup-button" mat-raised-button (click)="userRegister()">Signup</button>
-</mat-toolbar>
+</div>

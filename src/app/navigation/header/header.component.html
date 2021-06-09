@@ -9,43 +9,26 @@
       <mat-icon>image_search</mat-icon> Gamepedia
     </button>
     </div>
-    <div class="search-bar" fxFlex fxLayout fxLayoutAlign="flex-end center" fxShow.xs fxShow.sm fxHide.gt-sm>
-        <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)" (ngSubmit)="_authService.notLogged()">
-            <input mat-input class="search-input" matInput name="search" ngModel placeholder="Search " />
-
-            <button class="header-button" mat-raised-button class="search-button" color="primary" (click)="_authService.notLogged()">
-        Search
-      </button>
-        </form>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end center" fxShow.xs fxShow.sm fxHide.gt-sm>
+        <app-search-bar></app-search-bar>
     </div>
-    <div class="search-bar" fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs fxHide.sm>
-        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-            <button class="header-button" mat-flat-button color="primary" (click)="_authService.notLogged()" routerLink="/home" style="width: 150px">
-        Our Database
-      </button>
 
-            <div class="search-bar" fxFlex fxLayout fxLayoutAlign="flex-end center">
-                <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)" (ngSubmit)="_authService.notLogged()">
-                    <input class="search-input" matInput name="search" ngModel placeholder="Search 500,000+ games" />
+    <div fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs fxHide.sm>
+        <app-search-bar></app-search-bar>
+    </div>
 
-                    <button class="header-button" mat-raised-button class="search-button" color="primary" (click)="_authService.notLogged()">
-            Search
-          </button>
-                </form>
-
-                <div fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs fxHide.sm>
-                    <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/login">
-            Login
-          </button>
-                    <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/register">
-            Signup
-          </button>
-
-                    <button class="header-button" mat-raised-button color="primary" *ngIf="_authService.loggedIn()" (click)="onLogout()" (click)="_authService.logoutUser()" routerLink="">
-            Logout
-          </button>
-                </div>
-            </div>
-        </ul>
+    <!-- Login -->
+    <div fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs fxHide.sm>
+        <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/login">
+      Login
+    </button>
+        <!-- Signup           -->
+        <button class="header-button" mat-raised-button color="primary" *ngIf="!_authService.loggedIn()" routerLink="/register">
+      Signup
+    </button>
+        <!-- Logout -->
+        <button class="header-button" mat-raised-button color="primary" *ngIf="_authService.loggedIn()" (click)="onLogout()" (click)="_authService.logoutUser()" routerLink="">
+      Logout
+    </button>
     </div>
 </mat-toolbar>
